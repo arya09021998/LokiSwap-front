@@ -291,7 +291,7 @@ library LokiSwapLibrary {
                 hex'ff',
                 factory,
                 keccak256(abi.encodePacked(token0, token1)),
-                hex'40cad7bdde0b68489bdd6a189ee3499fc72dce580651d5ef1b31933cd66bcba8 ' // init code hash
+                hex'f8a2d5a6282481ffb00cdebc6565225fe4c33e591389c428185513ac01da8bd6' // init code hash
             ))));
     }
 
@@ -314,7 +314,7 @@ library LokiSwapLibrary {
     function getAmountOut(uint amountIn, uint reserveIn, uint reserveOut) internal pure returns (uint amountOut) {
         require(amountIn > 0, 'LokiSwapLibrary: INSUFFICIENT_INPUT_AMOUNT');
         require(reserveIn > 0 && reserveOut > 0, 'LokiSwapLibrary: INSUFFICIENT_LIQUIDITY');
-        uint amountInWithFee = amountIn.mul(9963);
+        uint amountInWithFee = amountIn.mul(9978);
         uint numerator = amountInWithFee.mul(reserveOut);
         uint denominator = reserveIn.mul(10000).add(amountInWithFee);
         amountOut = numerator / denominator;
@@ -325,7 +325,7 @@ library LokiSwapLibrary {
         require(amountOut > 0, 'LokiSwapLibrary: INSUFFICIENT_OUTPUT_AMOUNT');
         require(reserveIn > 0 && reserveOut > 0, 'LokiSwapLibrary: INSUFFICIENT_LIQUIDITY');
         uint numerator = reserveIn.mul(amountOut).mul(10000);
-        uint denominator = reserveOut.sub(amountOut).mul(9963);
+        uint denominator = reserveOut.sub(amountOut).mul(9978);
         amountIn = (numerator / denominator).add(1);
     }
 

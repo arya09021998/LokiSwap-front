@@ -36,12 +36,7 @@ export const getFarmApr = (
   farmAddress: string,
   lokipersecond: BigNumber,
 ): { cakeRewardsApr: number; lpRewardsApr: number } => {
-  console.log('log->poolWeight', poolWeight.toString())
-  console.log('log->cakePriceUsd', cakePriceUsd)
-  console.log('log->poolLiquidityUsd', poolLiquidityUsd)
-  console.log('log->lokipersecond', lokipersecond.toString())
   const cakePerYear = lokipersecond.times(BLOCKS_PER_YEAR)
-  console.log('log->cakePerYear', cakePerYear.toString())
   const yearlyCakeRewardAllocation = cakePerYear.times(poolWeight)
   const cakeRewardsApr = yearlyCakeRewardAllocation.times(cakePriceUsd).div(poolLiquidityUsd).times(100)
   let cakeRewardsAprAsNumber = null

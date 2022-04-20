@@ -8,17 +8,17 @@ const farms: FarmConfig[] = [
     isTokenOnly: true,
     lpAddresses: {
       97: '',
-      56: '0x3c8e98Efd5dBbf7F0200Aa9C9C5F39294ca18e53',
+      56: '0xac34e490dcA7F31C6943002D61e4B722f6F8C592',
     },
     token: tokens.loki,
-    quoteToken: tokens.usdt,
+    quoteToken: tokens.busd,
   },
   {
     pid: 1,
     lpSymbol: 'LOKI-BUSD LP',
     lpAddresses: {
       97: '',
-      56: '0x3c8e98Efd5dBbf7F0200Aa9C9C5F39294ca18e53',
+      56: '0xac34e490dcA7F31C6943002D61e4B722f6F8C592',
     },
     token: tokens.loki,
     quoteToken: tokens.busd,
@@ -28,7 +28,7 @@ const farms: FarmConfig[] = [
     lpSymbol: 'LOKI-BNB LP',
     lpAddresses: {
       97: '',
-      56: '0x4054cD657986251693e18261b2a2b99914e2b257',
+      56: '0x41f70BA0aBBedb86979308716AC84cDb235aC592',
     },
     token: tokens.loki,
     quoteToken: tokens.wbnb,
@@ -38,7 +38,7 @@ const farms: FarmConfig[] = [
     lpSymbol: 'BUSD-BNB LP',
     lpAddresses: {
       97: '',
-      56: '0x58F876857a02D6762E0101bb5C46A8c1ED44Dc16',
+      56: '0xeA198912a0F177C1633EEB9D88E0c1B3b7E1347A',
     },
     token: tokens.busd,
     quoteToken: tokens.wbnb,
